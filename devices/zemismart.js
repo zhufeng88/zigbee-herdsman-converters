@@ -155,21 +155,21 @@ module.exports = [
         ],
     },
     {
-        fingerprint: [{ modelID: 'TS0601', manufacturerName: '_TZE200_udank5zs' }],
+        fingerprint: [{modelID: 'TS0601', manufacturerName: '_TZE200_udank5zs'}],
         model: 'ZM25TQ',
         vendor: 'Zemismart',
         description: 'Tubular motor',
         fromZigbee: [
-          fz.zm25tq_cover,
-          fz.ignore_basic_report,
+            fz.zm25tq_cover,
+            fz.ignore_basic_report,
         ],
         toZigbee: [tz.zm25tq_cover_control, tz.zm25tq_cover_options],
         exposes: [
-          e.cover_position().setAccess('position', ea.STATE_SET),
-          exposes.enum('motor_direction', ea.STATE_SET, ['Forward', 'Back']),
-          exposes.enum('top_limit', ea.STATE_SET, ['Save', 'Clean']),
-          exposes.enum('middle_limit', ea.STATE_SET, ['Save', 'Clean']),
-          exposes.enum('bottom_limit', ea.STATE_SET, ['Save', 'Clean']),
+            e.cover_position().setAccess('position', ea.STATE_SET),
+            exposes.enum('motor_direction', ea.STATE_SET, ['Forward', 'Back']),
+            exposes.enum('top_limit', ea.STATE_SET, ['Save', 'Clean']),
+            exposes.enum('middle_limit', ea.STATE_SET, ['Save', 'Clean']),
+            exposes.enum('bottom_limit', ea.STATE_SET, ['Save', 'Clean']),
         ],
-      }
+    },
 ];
